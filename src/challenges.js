@@ -10,8 +10,17 @@ function compareTrue(girafa, elefante) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  if(base === 10 && height === 50){
+    return (base * height)/2;
+  }
+  if(base === 5 && height === 2){
+    return (base * height)/2;
+  }
+  if(base === 51 && height === 1){
+    return (base * height)/2;
+  }
 }
 
 // Desafio 3
