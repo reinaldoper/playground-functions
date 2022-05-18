@@ -31,8 +31,10 @@ function splitSentence(nome) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(concate) {
+  // seu código aquiclea
+
+  return concate[concate.length -1]+", "+concate[0];
 }
 
 // Desafio 5
