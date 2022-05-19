@@ -2,7 +2,7 @@
 
 function compareTrue(girafa, elefante) {
   // seu código aqui
-  if(girafa === true && elefante && true){
+  if(girafa === true && elefante === true){
     return true;
   }else{
     return false;
@@ -26,8 +26,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(nome) {
   // seu código aqui
- 
-  return nome.split(' ');
+   return nome.split(' ');
 }
 
 // Desafio 4
@@ -76,17 +75,19 @@ function highestCount(numeros) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
- 
-  if((cat1+=mouse) < (cat2+=mouse)){
+    
+  if((Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse))){
     return 'cat1';
   }
-  if((cat1+=mouse) > (cat2+=mouse)){
+  if((Math.abs(cat1 - mouse)) > (Math.abs(cat2 - mouse))){
     return 'cat2';
   }
-  if((cat1+=mouse) === (cat2+=mouse)){
-    return 'os gatos trombam e o rato foge';
+  if((Math.abs(cat1 - mouse)) === (Math.abs(cat2 - mouse))){
+      return 'os gatos trombam e o rato foge';
+    
   }
 }
+
 
 
 // Desafio 8
