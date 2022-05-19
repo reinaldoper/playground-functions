@@ -74,9 +74,20 @@ function highestCount(numeros) {
 
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+ 
+  if((cat1+=mouse) < (cat2+=mouse)){
+    return 'cat1';
+  }
+  if((cat1+=mouse) > (cat2+=mouse)){
+    return 'cat2';
+  }
+  if((cat1+=mouse) === (cat2+=mouse)){
+    return 'os gatos trombam e o rato foge';
+  }
 }
+
 
 // Desafio 8
 function fizzBuzz() {
