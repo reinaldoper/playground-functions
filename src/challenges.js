@@ -149,9 +149,21 @@ function decode(vogal1) {
 }
 
 // Desafio 10
-function techList() {
+
+function techList(texto, nome) {
   // seu código aqui
+  let new1 = [];
+  if(!texto.length){
+    return 'Vazio!';
+  }
+  texto = texto.sort();
+  for(let i of texto){
+    new1.push({tech: i, name: nome});
+  }
+  return new1;
+
 }
+
 
 module.exports = {
   calcArea,
