@@ -63,9 +63,27 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(cervejaTrybe) {
   // seu código aqui
+  let cerveja = "1 cerveja";
+  let cachaça = "1 cachaça, 5 cervejas e 1 copo de vinho";
+  let catuaba = '2 shots de tequila, 2 cervejas e 1 corote';
+  let tequile = '4 caipirinhas e 2 cervejas';
+  let catupiri = '1 copo de catuaba, 1 cervejas e 1 copo de vinho';
+  if(cerveja.includes(cervejaTrybe)){
+    return '1 copo de água';
+  }
+  if(cachaça.includes(cervejaTrybe)){
+    return '7 copos de água';
+  }if(catuaba.includes(cervejaTrybe)){
+    return '5 copos de água';
+  }if(tequile.includes(cervejaTrybe)){
+    return '6 copos de água';
+  }if(catupiri.includes(cervejaTrybe)){
+    return '3 copos de água';
+  }
 }
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
