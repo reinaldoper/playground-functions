@@ -1,26 +1,35 @@
 // Desafio 11
-generatePhoneNumber([1, 2, 7, 7, 3, 6, 7, 9, 7, 8, 7]);
+/* generatePhoneNumber([1, 2, 2, 4, 5, 5, 2, 8, 9, 0, 1]); */
 function generatePhoneNumber(numberOn) {
   // seu código aqui
   let array = [];
   let newArray = [];
   let newArray1;
   let index;
-  let cont = 0;
+  let contador = [];
   if (numberOn.length != 11 ) {
     return "Array com tamanho incorreto.";
   }
-  for(index = 0; index < numberOn.length; index ++) {
-      if((numberOn[index +2] === numberOn[index +3]) || (numberOn[index +2] === numberOn[index +4]) || (numberOn[index] === numberOn[index +5])){
-        cont++;
-      }    
+  for(let i = 0; i < numberOn.length; i ++) {
+    cont = [];
+      for(let j = 0; j < numberOn.length; j ++){
+        if(numberOn[i] === numberOn[j]){
+          cont ++;
+          contador[i] = cont;
+        }
+      }   
+  }
+  let maior = 0;
+  for(let x = 0; x < contador.length; x ++){
+    if(contador[x] > maior){
+      maior = contador[x];
+    }
+  }
+   if(maior >=3){
+    return "não é possível gerar um número de telefone com esses valores";
   }
    for(index = 0; index < numberOn.length; index ++) {
     if(numberOn[index] > 9 || numberOn[index] < 0){
-      return "não é possível gerar um número de telefone com esses valores";
-    }/* else if(numberOn[index] === numberOn[index +1]){
-      return "não é possível gerar um número de telefone com esses valores";
-    } */else if(cont >= 3){
       return "não é possível gerar um número de telefone com esses valores";
     }else{
     array.push(numberOn[index]);
@@ -32,7 +41,7 @@ function generatePhoneNumber(numberOn) {
   newArray1 =  newArray.replace(a,""); 
   return "("+newArray1[0]+newArray1[1]+")"+" "+newArray1[2]+newArray1[3]+newArray1[4]+newArray1[5]+newArray1[6]+"-"+newArray1[7]+newArray1[8]+newArray1[9]+newArray1[10]+"";
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); */
 
 /* a = ["Mike","Matt","Nancy","Adam","Jenny","Nancy","Carl"];
 b = {};
@@ -83,7 +92,7 @@ function hydrate(cervejaTrybe) {
     return '3 copos de água';
   }
 }
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+
 
 module.exports = {
   generatePhoneNumber,
